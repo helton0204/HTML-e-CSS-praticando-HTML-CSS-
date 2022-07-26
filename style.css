@@ -1,0 +1,182 @@
+:root{ /*Esse bloco é destinado a criação de variáveis*/
+    --branco_principal: #ffffff; /*com as variáveis CSS é possível alterar o valor de alguma cor reescrevendo um único lugar do código.*/
+    --cinza_secundario: #c0c0c0;
+    --botão_azul: #167bf7;
+    --cor_de_fundo: #00030c;
+    --fonte_principal: 'Inter';
+}
+
+body{
+    background-color: var(--cor_de_fundo); /*chamando uma variável criada acima*/
+    font-family: var(--fonte_principal);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--branco_principal);
+}
+
+/* PRIMEIRA SESSÃO */
+
+.principal{
+    background-image: url("img/Background.png"); /*A dica é usar o background-image apenas em imagens decorativas (que não possuem nenhuma informação relevante)*/
+    background-repeat: no-repeat;
+    background-size: contain; /*ajusta a imagem para o tamanho do elemento que a contém, no caso é a tag section*/
+    align-items: center; /*centraliza verticalmente uma tag em relação a coluna do display grid*/
+    text-align: center; /*centraliza horizontalmente os elementos dentro de uma tag*/
+}
+
+.container{
+    height: 100vh; /*vh significa view port height que é a aultura da tela do dispositivo. 100vh significa 100% da altura do dispositivo, essa altura é calculada altomaticamente*/
+    display: grid; /*O display grid divide o bloco da classe container em duas colunas da tela, fazendo com que os elementos se posicionem nelas*/
+    grid-template-columns: 50% 50%; /*Aqui o bloco da classe container foi dividido em duas colunas que ocupam 50% da tela, cada coluna*/
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+h1{
+    color: var(--branco_principal);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__botao{
+    background-color: var(--botão_azul);
+    border-radius: 5px;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--branco_principal);
+    display: block;
+    margin-bottom: 1em;
+    transition: 0.2s;
+}
+
+.container__botao:hover{
+    background-color: #EC2F46;
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco_principal);
+}
+
+.container__aviso{
+    color: var(--cinza_secundario);
+    font-size: 12px;
+}
+
+/* SEGUNDA SESSÃO */
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco_principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza_secundario);
+}
+
+/* TERCEIRA SESSÃO */
+
+.descricao__texto{
+    margin-bottom: 0.8em;
+}
+
+.secundario__botao{
+    display: inline-block;
+    width: 30%;
+}
+
+.container__descrição{
+    padding: 2em;
+}
+
+/* QUARTA SESSÃO */
+
+.secundario__img{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* DISPOSITIVOS FAVORITOS */
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulos{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    margin: 5em 0;
+}
+
+.lista__item{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.rodape__logo{
+    display: block;
+    margin: 9em auto;
+    margin-bottom: 2em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.lista__link a{
+    font-size: 16px;
+    color: var(--branco_principal);
+    text-decoration: none;
+    margin: 0 0.5em;
+    transition: 0.2s;
+}
+
+.lista__link a:hover{
+    color: var(--botão_azul);
+}
+
+.lista__link a:active{
+    color: #EC2F46;
+}
+
+.rodape__texto{
+    font-size: 14px;
+    color: var(--cinza_secundario);
+    text-align: center;
+    margin: 1em 5em;
+    line-height: 1.5em;
+}
+
+.rodape p + p{
+    margin-bottom: 5em;
+ }
